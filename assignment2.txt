@@ -1,0 +1,15 @@
+JS assignment
+Meaning of;
+1.Definition
+Definition is assigning a specific value to a variable.
+eg var a=7; ...7 is the specific value of variable a.
+
+2.Declaration
+Declaration is creating a variable.You declare a Javascript variable with the "var" keyword.
+Eg var carname;
+
+3.Initialization
+Initialization is the assigning of an initial value to a variable.
+Undefined is the initial value of a declared variable.
+Eg >var carname = "i8 roadster"
+	<.undefined
