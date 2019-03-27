@@ -1,0 +1,8 @@
+fruit-list = ['lemon', 'mango', 'melon', 'apple', 'banana'];
+function printFruit(fruit-list){
+console.log(fruit-list);
+}
+['lemon', 'mango', 'melon', 'apple', 'banana']
+var fruit-index = prompt("Hey pick you favourite fruit 0-4");
+console.log(fruit-list[fruit-index]);
+function favFruit(fruit-list,fruit-index){alert(fruit-list[fruit-index]);
