@@ -1,0 +1,10 @@
+function purchase(name,quantity){
+    							
+				var fruits =[{name:'apples',price:30},{name:'bananas',price:10},{name:'grapes',price:50},{name:'dates',price:100},{name:'pineapples',price:150}]
+				y=quantity * fruits[i].price;
+                                    
+				z=console.log(quantity + name +' for KES ' + y);}
+
+purchase('apples',3);
+
+3dates for KES 90
