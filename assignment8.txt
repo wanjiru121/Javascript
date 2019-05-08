@@ -1,0 +1,13 @@
+1. let user = {name:"Jane Doe",years:20};
+   let{name, years:age, isStudent = "false"}=user;
+    console.log(name) //"Jane Doe"
+    console.log(age)  //20
+    console.log(isStudent) //"false"
+
+2. let ask = (question,yes,no) => {if (confirm(question,yes,no)) yes()
+                                else no();
+                               }
+                               ask("Do you agree?",
+                               function() {alert("you agreed");},
+                               function() {alert("you cancelled the execution");}
+                               );
