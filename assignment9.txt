@@ -1,0 +1,22 @@
+document.body.style.backgroundColor = "silver"
+
+var title = document.getElementById("title")
+title.style.color = "green"
+
+var h3 = document.getElementsByTagName("h3")
+
+for(var i = 0;i < h3.length;i++){
+ h3[i].style.textTransform = "upperCase"
+}
+
+var fli = document.createElement("li")
+var text = document.createTextNode("pineapples")
+fli.append(text)
+var ul = document.getElementById("fruList")
+ul.appendChild(fli)
+
+var vli = document.createElement("li")
+var text = document.createTextNode("Spinach")
+vli.append(text)
+var ul = document.getElementById("vegList")
+ul.appendChild(vli)
