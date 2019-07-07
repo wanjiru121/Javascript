@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <title>Greens Kiosk</title>
+</head>
+
+<body>
+   <h1 id="title">Welcome to Greens Kiosk</h1>
+  <script type="text/javascript">
+       var x = document.getElementById("title");
+       x.style.color = "green";
+   
+     function changeColor(){
+        x.style.color = x.style.color == "green"?"blue":"green";
+      }
+   
+      setInterval(changeColor,1000);
+   </script>
+   <h3>We sell fruits and vegetables</h3>
+  
+   <h2>Products</h2>
+   <button class="collapseList1">Products List</button>
+   <ul id="products">
+       <script type="text/javascript">
+         fetch("http://localhost:5000/products")
+         .then(response => response.json())
+         .then(response => {
+             response.forEach(item => {
+                 var ul = document.getElementById("products")
+                 var li = document.createElement("li");
+                 var text = document.createTextNode(item.name);
+                 li.appendChild(text);
+                 ul.appendChild(li);
+
+             })
+         })
+        </script>
+       
+   </ul>
+   <script>
+       
+    var list1 = document.getElementsByClassName("collapseList1");
+    for (i = 0; i < list1.length; i++) {
+    list1[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+  }
+
+   </script>
+   <h3>Fruits</h3>
+   <button class="collapseList1">Fruits List</button>
+   <ul id="fruList">
+        <script type="text/javascript">
+            fetch("http://localhost:5000/products/fruits")
+            .then(response => response.json())
+            .then(response => {
+                response.forEach(item => {
+                    var ul = document.getElementById("fruList")
+                    var li = document.createElement("li");
+                    var text = document.createTextNode(item.name);
+                    li.appendChild(text);
+                    ul.appendChild(li);
+   
+                })
+            })
+           </script>
+   </ul>
+   <script>
+       
+        var list1 = document.getElementsByClassName("collapseList1");
+        for (i = 0; i < list1.length; i++) {
+        list1[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+      }
+    
+       </script>
+   <h3>Vegetables</h3>
+   <button class="collapseList1">Vegetables List</button>
+   <ul id="vegList">
+        <script type="text/javascript">
+            fetch("http://localhost:5000/products/vegetables")
+            .then(response => response.json())
+            .then(response => {
+                response.forEach(item => {
+                    var ul = document.getElementById("vegList")
+                    var li = document.createElement("li");
+                    var text = document.createTextNode(item.name);
+                    li.appendChild(text);
+                    ul.appendChild(li);
+   
+                })
+            })
+           </script>
+   </ul> 
+   <script>
+       
+        var list1 = document.getElementsByClassName("collapseList1");
+        for (i = 0; i < list1.length; i++) {
+        list1[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+      }
+    
+       </script>
+
+
+</body>
+
+</html>
+
